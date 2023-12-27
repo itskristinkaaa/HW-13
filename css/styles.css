@@ -148,12 +148,17 @@ table {
     padding: 15px 20px 0;
 }
 
+.custom-checkbox {
+	margin-left: 25px;
+}
+
 .custom-checkbox label {
 	padding-top: 21px;
 	cursor: pointer;
 	position: relative;
     font-size: 12px;
     font-family: 'Roboto';
+	color: white;
 }
 
 .custom-checkbox input {
@@ -166,20 +171,42 @@ table {
 	content: '';
 	position: absolute;
 	top: 20px;
-	left: -120px;
+	left: -25px;
 	width: 15px;
 	height: 15px;
-    border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #D9D9D9;
 }
 
 .custom-checkbox input:checked + label::before  {
-	background: #153416;
+	background-color: #153416;
+	border: solid 1px #153416;
+}
+
+/* ГАЛОЧКА ДЛЯ ЧЕКБОКСУ */
+.custom-checkbox input:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	left: -21px;
+	width: 6px;
+	height: 12px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(38deg);
 }
 
 .link {
     color: #153416;
     font-size: 12px;
     font-family: 'Roboto';
+}
+
+.remember-forget {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 30px;
 }
 
 .button {
@@ -191,4 +218,39 @@ table {
     font-family: 'Roboto';
     color: white;
     cursor: pointer;
+}
+
+.regtext {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 15px;
+	padding-top: 40px;
+	font-size: 12px;
+	font-family: 'Roboto';
+	color: #153416;
+}
+
+.regtext a {
+	color: white;
+}
+
+.logtext {
+	font-size: 12px;
+	font-family: 'Roboto';
+	color: #153416;
+	padding-top: 30px;
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 20px;
+	padding-top: 20px;
+}
+
+.social-media svg {
+	width: 24px;
+	height: 24px;
 }
